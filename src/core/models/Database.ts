@@ -1,6 +1,5 @@
 import dotenv from 'dotenv'
 import { createConnection, Connection } from 'typeorm'
-
 import User from './User'
 
 
@@ -26,7 +25,7 @@ export default class Database {
       throw new Error('Please check your DATABASE_URL value')
     }
 
-    const [username, password, host, port, database] = founded
+    const [, , username, password, host, port, database] = founded
 
     this._connection = await createConnection({
       type: 'postgres',

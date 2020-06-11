@@ -10,7 +10,7 @@ import passport from 'passport'
 const api = Router()
 
 api.post('/signup', async (req: Request, res: Response) => {
-  const fields = ['firstname', 'lastname','username', 'password', 'passwordConfirmation']
+  const fields = ['firstname', 'lastname','username', 'mail', 'password', 'passwordConfirmation']
 
   try {
     const missings = fields.filter((field: string) => !req.body[field])
@@ -20,7 +20,7 @@ api.post('/signup', async (req: Request, res: Response) => {
       throw new Error(`Field${isPlural ? 's' : ''} [ ${missings.join(', ')} ] ${isPlural ? 'are' : 'is'} missing`)
     }
 
-    const { firstname, lastname, username, password, passwordConfirmation } = req.body
+    const { firstname, lastname, username, mail, password, passwordConfirmation } = req.body
 
     if (password !== passwordConfirmation) {
       throw new Error("Password doesn't match")
@@ -31,6 +31,7 @@ api.post('/signup', async (req: Request, res: Response) => {
     user.firstname = firstname
     user.lastname = lastname
     user.username = username
+    user.mail = mail
     user.password = password
 
     await user.save()

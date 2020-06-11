@@ -26,6 +26,9 @@ export default class User extends BaseEntity {
   @Column({ nullable: false, unique: true })
   username!: string
 
+  @Column({ nullable: false, unique: true })
+  mail!: string
+
   @Column({ nullable: false })
   password!: string
 

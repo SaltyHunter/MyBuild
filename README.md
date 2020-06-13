@@ -1,27 +1,25 @@
-# MyBuild API
+# MyBuild API V0.1
 
-Authentification : 
+# Authentification : 
 
 S'inscrire POST : https://mybuild-api.herokuapp.com/api/authenticate/signup
 
-{
-
-    "firstname": ,
-    "lastname": ,
-    "username": ,
-    "mail": ,
-    "password": , 
-    "passwordConfirmation":
-}
-
+    {
+        "firstname": ,
+        "lastname": ,
+        "username": ,
+        "mail": ,
+        "password": , 
+        "passwordConfirmation":
+    }
+    
 Se connecter POST : https://mybuild-api.herokuapp.com/api/authenticate/signin
 
-{
+    {
+        "username": ,
+        "password":  
+    }
 
-    "username": ,
-    "password":  
-}
-
-Profil : 
+# Profil : 
 
 Voir son profil GET : https://mybuild-api.herokuapp.com/api/users/{uuid}

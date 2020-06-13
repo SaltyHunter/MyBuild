@@ -3,6 +3,7 @@
 Authentification : 
 
 S'inscrire POST : https://mybuild-api.herokuapp.com/api/authenticate/signup
+
 Se connecter POST : https://mybuild-api.herokuapp.com/api/authenticate/signin
 
 Profil : 

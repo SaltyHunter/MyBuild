@@ -10,7 +10,7 @@ import passport from 'passport'
 const api = Router()
 
 api.post('/signup', async (req: Request, res: Response) => {
-  const fields = ['firstname', 'lastname','username', 'mail', 'password', 'passwordConfirmation']
+  const fields = ['firstname', 'lastname', 'username', 'mail', 'password', 'passwordConfirmation']
 
   try {
     const missings = fields.filter((field: string) => !req.body[field])

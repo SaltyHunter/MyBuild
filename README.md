@@ -1,4 +1,4 @@
-# MyBuild API V0.1
+# MyBuild API 
 
 # Authentification : 
 
@@ -27,7 +27,8 @@ Voir son profil GET : https://mybuild-api.herokuapp.com/api/users/{uuid}
 # Build
 
 Voir un build GET : https://mybuild-api.herokuapp.com/api/users/{uuid}/build/1
-// Voir son build GET :
+Voir les build selon le champion GET : https://mybuild-api.herokuapp.com/api/users/{uuid}/buildByChamp/{id_champion}
+    - Cette partit est en cours de réalisation : problème pour envoyer un JSON des objet.
 
 Poster un build POST : https://mybuild-api.herokuapp.com/api/users/{uuid}/build
 
@@ -54,6 +55,6 @@ Poster un build POST : https://mybuild-api.herokuapp.com/api/users/{uuid}/build
     }
 
 Modifier son build PUT : https://mybuild-api.herokuapp.com/api/users/{uuid}/build/{id_build}
-JSON similaire au POST
+    - Meme JSON que pour le POST
 
 Supprimer son build DELETE : https://mybuild-api.herokuapp.com/api/users/{uuid}/build/{id_build}

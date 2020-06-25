@@ -10,14 +10,10 @@ const api = Router({ mergeParams: true })
 
 api.get('/:id', async (req: Request, res: Response) => {
   try {
-    // const { uuid } = req.params
     const { id } = req.params
 
     const build = await Build.findOne({ where: { id: id } })
-    //const build = await Build.findOne({ where: { id: id } })
-    // await User.findOne({ where: { id: uuid } }) && await Build.findOne({ where: { id: id } })
-
-    res.status(CREATED.status).json(success(build))
+    res.status(OK.status).json(success(build))
   } catch (err) {
     res.status(BAD_REQUEST.status).json(error(BAD_REQUEST, err))
   }
@@ -117,7 +113,7 @@ api.post('/', async (req: Request, res: Response) => {
 api.put('/:id', async (req: Request, res: Response) => {
   try {
     const { id } = req.params
-    // const { uuid } = req.params
+    // const { userId } = req.params
     const bid = +id
 
     const {
@@ -173,10 +169,9 @@ api.put('/:id', async (req: Request, res: Response) => {
 api.delete('/:id', async (req: Request, res: Response) => {
   try {
     const { id } = req.params
-    // const { uuid } = req.params
-    // const user = await User.findOne({ where: { id: uuid } })
+    const { userId } = req.params
+
     // const build = await Build.findOne({ where: { id: id } })
-    // const build = await User.findOne({ where: { id: uuid } }) && await Build.findOne({ where: { id: id } })
     const bid = +id
     await Build.delete({ id: bid })
 

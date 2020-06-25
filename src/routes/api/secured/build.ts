@@ -169,8 +169,7 @@ api.put('/:id', async (req: Request, res: Response) => {
 api.delete('/:id', async (req: Request, res: Response) => {
   try {
     const { id } = req.params
-    const { userId } = req.params
-
+    // const { userId } = req.params
     // const build = await Build.findOne({ where: { id: id } })
     const bid = +id
     await Build.delete({ id: bid })

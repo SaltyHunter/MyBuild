@@ -7,7 +7,7 @@ import {
   UpdateDateColumn,
   BeforeInsert,
   BeforeUpdate,
-  OneToMany,
+  OneToMany
 } from 'typeorm'
 import bcrypt from 'bcryptjs'
 import Build from './Build'

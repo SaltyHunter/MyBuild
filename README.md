@@ -26,10 +26,10 @@ Voir son profil GET : https://mybuild-api.herokuapp.com/api/users/{uuid}
 
 # Build
 
-// Voir son build GET : 
+Voir un build GET : https://mybuild-api.herokuapp.com/api/users/{uuid}/build/1
 // Voir son build GET :
 
-Poster son Buid POST : https://mybuild-api.herokuapp.com/api/users/0f71881b-df33-4a5b-a79b-3bdbab9918ad/build
+Poster un build POST : https://mybuild-api.herokuapp.com/api/users/{uuid}/build
 
     {
         "id_champ":,
@@ -54,7 +54,6 @@ Poster son Buid POST : https://mybuild-api.herokuapp.com/api/users/0f71881b-df33
     }
 
 Modifier son build PUT : https://mybuild-api.herokuapp.com/api/users/{uuid}/build/{id_build}
-
 JSON similaire au POST
 
-Supprimer son build : 
+Supprimer son build DELETE : https://mybuild-api.herokuapp.com/api/users/{uuid}/build/{id_build}

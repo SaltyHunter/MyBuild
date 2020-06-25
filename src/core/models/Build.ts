@@ -12,10 +12,11 @@ import User from './User'
 
 @Entity()
 export default class Build extends BaseEntity {
+
   @PrimaryGeneratedColumn()
   id!: number
 
-  @Column({ nullable: false, unique: true })
+  @Column({ nullable: false, })
   uuid_creator!: string
 
   @Column({ nullable: false })

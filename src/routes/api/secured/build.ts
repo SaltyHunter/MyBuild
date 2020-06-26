@@ -156,7 +156,6 @@ api.put('/:id', async (req: Request, res: Response) => {
     await Build.update({ id: id }, { rt3: rt3 })
     await Build.update({ id: id }, { commentaire: commentaire })
 
-
     const build = await Build.findOne({ where: { id: id } })
 
     res.status(OK.status).json(success(build))
@@ -170,7 +169,6 @@ api.delete('/:id', async (req: Request, res: Response) => {
     const { id } = req.params
     // const { userId } = req.params
     // const build = await Build.findOne({ where: { id: id } })
-    const bid = +id
     await Build.delete({ id: id })
 
     res.status(OK.status).json({ delete: 'OK' })

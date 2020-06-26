@@ -14,7 +14,6 @@ import Build from './Build'
 
 @Entity()
 export default class User extends BaseEntity {
-
   @PrimaryGeneratedColumn('uuid')
   id!: string
 
@@ -52,7 +51,7 @@ export default class User extends BaseEntity {
     }
 
     this.password = bcrypt.hashSync(this.password)
-    console.log("pass :",this.password)
+    console.log('pass :', this.password)
   }
 
   /**

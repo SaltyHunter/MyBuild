@@ -1,4 +1,4 @@
-import { Router, Request, Response, response } from 'express'
+import { Router, Request, Response } from 'express'
 import Build from '@/core/models/Build'
 import { error, success } from '@/core/helpers/response'
 import { BAD_REQUEST, OK } from '@/core/constants/api'

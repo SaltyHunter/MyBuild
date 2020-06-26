@@ -5,7 +5,7 @@ import buildBys from './buildBy'
 
 const api = Router()
 
-api.use('/users/', users)
+api.use('/users', users)
 api.use('/users/:userId/build', builds)
 api.use('/users/:userId/buildByChamp', buildBys)
 

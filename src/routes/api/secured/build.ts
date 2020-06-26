@@ -113,8 +113,6 @@ api.post('/', async (req: Request, res: Response) => {
 api.put('/:id', async (req: Request, res: Response) => {
   try {
     const { id } = req.params
-    // const { userId } = req.params
-    const bid = +id
 
     const {
       id_champ,
@@ -138,27 +136,28 @@ api.put('/:id', async (req: Request, res: Response) => {
       commentaire,
     } = req.body
 
-    await Build.update({ id: bid }, { id_champ: id_champ })
-    await Build.update({ id: bid }, { item1: item1 })
-    await Build.update({ id: bid }, { item2: item2 })
-    await Build.update({ id: bid }, { item3: item3 })
-    await Build.update({ id: bid }, { item4: item4 })
-    await Build.update({ id: bid }, { item5: item5 })
-    await Build.update({ id: bid }, { item6: item6 })
-    await Build.update({ id: bid }, { sum1: sum1 })
-    await Build.update({ id: bid }, { sum2: sum2 })
-    await Build.update({ id: bid }, { rp1: rp1 })
-    await Build.update({ id: bid }, { rp2: rp2 })
-    await Build.update({ id: bid }, { rp3: rp3 })
-    await Build.update({ id: bid }, { rp4: rp4 })
-    await Build.update({ id: bid }, { rs1: rs1 })
-    await Build.update({ id: bid }, { rs2: rs2 })
-    await Build.update({ id: bid }, { rt1: rt1 })
-    await Build.update({ id: bid }, { rt2: rt2 })
-    await Build.update({ id: bid }, { rt3: rt3 })
-    await Build.update({ id: bid }, { commentaire: commentaire })
+    await Build.update({ id: id }, { id_champ: id_champ })
+    await Build.update({ id: id }, { item1: item1 })
+    await Build.update({ id: id }, { item2: item2 })
+    await Build.update({ id: id }, { item3: item3 })
+    await Build.update({ id: id }, { item4: item4 })
+    await Build.update({ id: id }, { item5: item5 })
+    await Build.update({ id: id }, { item6: item6 })
+    await Build.update({ id: id }, { sum1: sum1 })
+    await Build.update({ id: id }, { sum2: sum2 })
+    await Build.update({ id: id }, { rp1: rp1 })
+    await Build.update({ id: id }, { rp2: rp2 })
+    await Build.update({ id: id }, { rp3: rp3 })
+    await Build.update({ id: id }, { rp4: rp4 })
+    await Build.update({ id: id }, { rs1: rs1 })
+    await Build.update({ id: id }, { rs2: rs2 })
+    await Build.update({ id: id }, { rt1: rt1 })
+    await Build.update({ id: id }, { rt2: rt2 })
+    await Build.update({ id: id }, { rt3: rt3 })
+    await Build.update({ id: id }, { commentaire: commentaire })
 
-    const build = await Build.findOne({ where: { id: bid } })
+
+    const build = await Build.findOne({ where: { id: id } })
 
     res.status(OK.status).json(success(build))
   } catch (err) {
@@ -172,7 +171,7 @@ api.delete('/:id', async (req: Request, res: Response) => {
     // const { userId } = req.params
     // const build = await Build.findOne({ where: { id: id } })
     const bid = +id
-    await Build.delete({ id: bid })
+    await Build.delete({ id: id })
 
     res.status(OK.status).json({ delete: 'OK' })
   } catch (err) {

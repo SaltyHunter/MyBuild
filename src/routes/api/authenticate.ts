@@ -35,10 +35,8 @@ api.post('/signup', async (req: Request, res: Response) => {
     user.password = password
 
     await user.save()
-
     const payload = { id: user.id, username }
     const token = jwt.sign(payload, process.env.JWT_ENCRYPTION as string)
-
     res.status(CREATED.status).json(success(user, { token }))
   } catch (err) {
     res.status(BAD_REQUEST.status).json(error(BAD_REQUEST, err))

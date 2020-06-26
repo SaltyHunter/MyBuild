@@ -13,7 +13,7 @@ import User from './User'
 @Entity()
 export default class Build extends BaseEntity {
   @PrimaryGeneratedColumn()
-  id!: number
+  id!: string
 
   @Column({ nullable: false })
   uuid_creator!: string

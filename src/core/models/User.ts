@@ -14,10 +14,9 @@ import Build from './Build'
 
 @Entity()
 export default class User extends BaseEntity {
-  private static SALT_ROUND = 8
 
   @PrimaryGeneratedColumn('uuid')
-  id!: number
+  id!: string
 
   @Column({ nullable: false })
   firstname!: string
@@ -52,7 +51,8 @@ export default class User extends BaseEntity {
       throw new Error('Password is not defined')
     }
 
-    this.password = bcrypt.hashSync(this.password, User.SALT_ROUND)
+    this.password = bcrypt.hashSync(this.password)
+    console.log("pass :",this.password)
   }
 
   /**
@@ -65,7 +65,7 @@ export default class User extends BaseEntity {
   public toJSON(): User {
     const json: User = Object.assign({}, this)
 
-    delete json.password
+    // delete json.password
 
     return json
   }

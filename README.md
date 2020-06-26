@@ -38,8 +38,10 @@ Modifier son profil PUT : https://mybuild-api.herokuapp.com/api/users/{uuid}
 # Build
 
 Voir un build GET : https://mybuild-api.herokuapp.com/api/users/{uuid}/build/1
+
 Voir les build selon le champion GET : https://mybuild-api.herokuapp.com/api/users/{uuid}/buildByChamp/{id_champion}
-    - Cette partit est en cours de réalisation : problème pour envoyer un JSON des objet.
+
+   - Cette partit est en cours de réalisation : problème pour envoyer un JSON des objet.
 
 Poster un build POST : https://mybuild-api.herokuapp.com/api/users/{uuid}/build
 

@@ -64,7 +64,7 @@ export default class User extends BaseEntity {
   public toJSON(): User {
     const json: User = Object.assign({}, this)
 
-    // delete json.password
+    delete json.password
 
     return json
   }

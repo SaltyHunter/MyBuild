@@ -2,6 +2,7 @@ import dotenv from 'dotenv'
 import { createConnection, Connection } from 'typeorm'
 import User from './User'
 import Build from './Build'
+import Rune from './Rune'
 
 export default class Database {
   private static _instance: Database | null = null
@@ -34,7 +35,7 @@ export default class Database {
       username,
       password,
       database,
-      entities: [User, Build],
+      entities: [User, Build, Rune],
       dropSchema: false,
       synchronize: true,
       logging: false,

@@ -35,7 +35,7 @@ Modifier son profil PUT : https://mybuild-api.herokuapp.com/api/users/{uuid}
         "passwordConfirmation":
     }
 
-# Build
+# Build :
 
 Voir un build GET : https://mybuild-api.herokuapp.com/api/users/{uuid}/build/1
 
@@ -92,3 +92,7 @@ Modifier son build PUT : https://mybuild-api.herokuapp.com/api/users/{uuid}/buil
     }
     
 Supprimer son build DELETE : https://mybuild-api.herokuapp.com/api/users/{uuid}/build/{id_build}
+
+# Runes :
+
+GET : https://mybuild-api.herokuapp.com/api/runes/{file_name}

@@ -51,7 +51,6 @@ export default class User extends BaseEntity {
     }
 
     this.password = bcrypt.hashSync(this.password)
-    console.log('pass :', this.password)
   }
 
   /**

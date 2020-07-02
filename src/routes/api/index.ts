@@ -17,7 +17,7 @@ api.get('/', (req: Request, res: Response) => {
 })
 
 api.use('/authenticate', auth)
-api.use('/runes',runes)
+api.use('/runes', runes)
 api.use('/', passport.authenticate('jwt', { session: false }), secured)
 
 export default api

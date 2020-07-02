@@ -90,7 +90,7 @@ export default class Build extends BaseEntity {
    */
   public toJSON(): Build {
     const json = Object.assign({}, this)
-    
+
     delete json.user
 
     return json
